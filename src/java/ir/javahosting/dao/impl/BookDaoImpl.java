@@ -1,0 +1,106 @@
+package ir.javahosting.dao.impl;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
+
+import ir.javahosting.dao.BookDao;
+import ir.javahosting.domain.Book;
+import ir.javahosting.domain.Category;
+import ir.javahosting.utils.C3P0Util;
+
+public class BookDaoImpl implements BookDao {
+
+	private QueryRunner qr=new QueryRunner(C3P0Util.getDataSource());
+	@Override
+	public void addBook(Book book) {
+		try {
+			qr.update("insert into books(id,name,author,price,path,filename,des,categoryId) values (?,?,?,?,?,?,?,?)", 
+					book.getId(),book.getName(),book.getAuthor(),book.getPrice(),book.getPath(),
+					book.getFilename(),book.getDes(),book.getCategory()==null?null:book.getCategory().getId());
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+		
+	}
+	@Override
+	public int getTotalRecordsNum() {
+		
+		try {
+			Long num=(Long) qr.query("select count(id) from books ",new ScalarHandler(1));
+			return num.intValue();
+		
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	@Override
+	public List<Book> findPageBooks(int startIndex, int size) {
+	
+		try {
+			List<Book>  books=qr.query("select * from books limit ?,? ",new BeanListHandler<Book>(Book.class),startIndex,size);
+			if(books!=null){
+				for (Book book : books) {
+					String sql = "select * from categorys where id=(select categoryId from books where id=?)";
+					Category category = qr.query(sql, new BeanHandler<Category>(Category.class), book.getId());
+					book.setCategory(category);
+				}
+			}
+			return books;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	@Override
+	public int getTotalRecordsNum(String categoryId) {
+		try {
+			Long num=(Long) qr.query("select count(id) from books where categoryId=? ",new ScalarHandler(1),categoryId);
+			return num.intValue();
+		
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+
+	}
+	@Override
+	public List<Book> findPageBooks(int startIndex, int pageSize,
+			String categoryId) {
+		
+		try {
+			List<Book>  books=qr.query("select * from books  where categoryId=?  limit  ?,? ",new BeanListHandler<Book>(Book.class),categoryId,startIndex,pageSize);
+			if(books!=null){
+				for (Book book : books) {
+					String sql = "select * from categorys where id=?";
+					Category category = qr.query(sql, new BeanHandler<Category>(Category.class),categoryId);
+					book.setCategory(category);
+				}
+			}
+			return books;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+	
+	
+	@Override
+	public Book findOne(String bookId) {
+		
+		try {
+			Book book = qr.query("select * from books where id=?", new BeanHandler<Book>(Book.class), bookId);
+			if(book!=null){
+					String sql = "select * from categorys where id=(select categoryId from books where id=?)";
+					Category category = qr.query(sql, new BeanHandler<Category>(Category.class), book.getId());
+					book.setCategory(category);
+			}
+			return book;
+		} catch (SQLException e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+}
