@@ -8,7 +8,7 @@ add jar file in lib folder to your project
 
 
 # Some Framework
-*Bootstrap
-*c3p0
-*JSP
+-Bootstrap
+-c3p0
+۰JSP
 
