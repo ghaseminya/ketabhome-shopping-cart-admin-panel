@@ -9,8 +9,9 @@ add jar file in lib folder to your project
 
 # Some Framework
 * Bootstrap
-* c3p0
+* [c3p0](https://github.com/ghaseminya/c3p0)
 * JSP
+* [Simple Java Email](https://github.com/ghaseminya/simple-java-mail)
 
 ## More Information
 * Website: http://ketabhome.ir/
