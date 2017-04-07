@@ -8,7 +8,18 @@ add jar file in lib folder to your project
 
 
 # Some Framework
-*Bootstrap
-*c3p0
-*JSP
+* Bootstrap
+* [c3p0](https://github.com/ghaseminya/c3p0)
+* JSP
+* [Simple Java Email](https://github.com/ghaseminya/simple-java-mail)
 
+## More Information
+* Website: http://ketabhome.ir/
+* Roadmap(upcoming features and bug fixes): https://github.com/ghaseminya/ketabhome
+* Hosting: [javahosting](http://www.javahosting.ir)
+* Development: https://github.com/ghaseminya/ketabhome
+* Copyright (C) 2017 javahosting.
+
+## License
+
+[GPL v3](./LICENSE).
