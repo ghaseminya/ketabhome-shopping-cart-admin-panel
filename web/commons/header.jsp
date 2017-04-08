@@ -1,7 +1,11 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+<c:set var="language" value="${not empty param.language ? param.language : not empty language ? language : pageContext.request.locale}" scope="session" />
+<fmt:setLocale value="${language}" />
+<fmt:setBundle basename="ir.javahosting.i18n.msg" />
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="${language}">
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta charset="utf-8" />
@@ -32,7 +36,7 @@
                     <a href="${pageContext.request.contextPath}/cms/index.jsp" class="navbar-brand">
                         <small >
                             <i class="fa fa-leaf"></i>
-                            Ketab Home
+                            <fmt:message key="index.name" />
                         </small>
                     </a>
 
@@ -55,7 +59,28 @@
 
                 <div class="navbar-buttons navbar-header pull-left  collapse navbar-collapse" role="navigation">
                     <ul class="nav ace-nav">
-                        
+                        <li>
+							<a  href="#" class="dropdown-toggle" data-toggle="dropdown">
+								Language
+	  		&nbsp;
+								<i class="ace-icon fa fa-language bigger-110"></i>
+							</a>
+
+							<ul class="dropdown-menu dropdown-right-blue dropdown-caret dropdown-menu-right">
+                                                            <li class="${language == 'en' ? 'active' : ''}">
+									<a href="?language=en">
+										English
+									</a>
+								</li>
+
+                                                                <li class="${language == 'fa' ? 'active' : ''}">
+									<a href="?language=fa">
+										فارسی
+									</a>
+								</li>
+
+							</ul>
+						</li>
                         <li class="light-blue dropdown-modal user-min">
                             <a data-toggle="dropdown" href="#" class="dropdown-toggle">
                                 
@@ -104,7 +129,10 @@
                                 </c:if>
                             </ul>
                         </li>
+                        
                     </ul>
+                   
+                    
                 </div>
                 <nav role="navigation" class="navbar-menu pull-right collapse navbar-collapse">
                     <ul class="nav navbar-nav">
