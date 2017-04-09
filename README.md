@@ -7,11 +7,14 @@ this shop has a simple admin panel too!
 add jar file in lib folder to your project
 
 
-# Some Framework
+# Some Featurs
 * [Bootstrap ACE admin dashboard](http://jason.insweet.family/ace/)
 * [c3p0](https://github.com/ghaseminya/c3p0)
 * JSP
 * [Simple Java Email](https://github.com/ghaseminya/simple-java-mail)
+* I18N
+* Error Handling page
+* Admin Panel
 
 ## More Information
 * Website: http://ketabhome.ir/
