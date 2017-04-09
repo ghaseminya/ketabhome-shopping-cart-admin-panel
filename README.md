@@ -11,7 +11,7 @@ add jar file in lib folder to your project
 * [Bootstrap ACE admin dashboard](http://jason.insweet.family/ace/)
 * Mysql
 * [c3p0](https://github.com/ghaseminya/c3p0)
-* JSP
+* JSP JSTL(core,fmt)
 * [Simple Java Email](https://github.com/ghaseminya/simple-java-mail)
 * I18N
 * Error Handling page
