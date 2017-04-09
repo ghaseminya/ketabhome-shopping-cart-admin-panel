@@ -13,6 +13,7 @@ add jar file in lib folder to your project
 * JSP
 * [Simple Java Email](https://github.com/ghaseminya/simple-java-mail)
 * I18N
+* Error Handling page
 * Admin Panel
 
 ## More Information
