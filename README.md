@@ -16,6 +16,7 @@ add jar file in lib folder to your project
 * I18N
 * Error Handling page
 * Admin Panel
+* Netbeans needed file!
 
 ## More Information
 * Website: http://ketabhome.ir/
