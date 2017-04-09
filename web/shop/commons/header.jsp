@@ -17,12 +17,7 @@
 <link href="${pageContext.request.contextPath}/shop/assets/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="${pageContext.request.contextPath}/shop/assets/js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
-<!--start slider -->
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/shop/assets/css/fwslider.css" media="all">
-    <script src="${pageContext.request.contextPath}/shop/assets/js/jquery-ui.min.js"></script>
-    <script src="${pageContext.request.contextPath}/shop/assets/js/css3-mediaqueries.js"></script>
-    <script src="${pageContext.request.contextPath}/shop/assets/js/fwslider.js"></script>
-<!--end slider -->
+
 <script src="${pageContext.request.contextPath}/shop/assets/js/jquery.easydropdown.js"></script>
 </head>
 <body>
@@ -54,7 +49,8 @@
 	    <div class="wrap">
 			<div class="header-bottom-left">
 				<div class="logo">
-					<a href="index.html"><img src="${pageContext.request.contextPath}/shop/assets/images/logo.png" alt=""/></a>
+					<a href="index.html">
+                                            <img src="${pageContext.request.contextPath}/shop/assets/images/logo3.png" style="height: 71px" alt=""/></a>
 				</div>
 				<div class="menu">
 	            <ul class="megamenu skyblue">
