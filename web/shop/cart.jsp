@@ -1,17 +1,23 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ include file="/header.jsp"%>
-    <h1>سبد خرید</h1>
-    <c:if test="${empty sessionScope.cart.items}">
-    	هیچ کالایی انتخاب نشده است.
+<%@ include file="/shop/commons/header.jsp"%>
+<div class="register_account">
+           <div class="wrap">
+    	     <h4 class="title">Shopping cart</h4>
+    	     
+   <c:if test="${empty sessionScope.cart.items}">
+       <p class="cart"><fmt:message key="cart.noitem" />.<br>Click<a href="index.html"> here</a> to continue shopping</p>
+    	   
+       
     </c:if>
     <c:if test="${!empty sessionScope.cart.items}">
-    	<table border="1" width=800">
+    	<p class="cart">
+        <table border="1" width=800">
     		<tr>
-    			<th>نام کتاب</th>
-    			<th>نویسنده کتاب</th>
-    			<th>قیمت کتاب</th>
-    			<th>تعداد</th>
-    			<th>عملیات</th>
+    			<th>Book Name</th>
+    			<th>Book Auther</th>
+    			<th>Book Price</th>
+    			<th>Number</th>
+    			<th>OP</th>
     		</tr>
     		<c:forEach items="${sessionScope.cart.items}" var="me" varStatus="vs">
     			<tr class="${vs.index%2==0?'even':'odd'}">
@@ -21,19 +27,22 @@
 	    			<td><input type="text" size="3" id="number" name="number" value="${me.value.number}" onchange="changeNumber(this,'${me.value.number}','${me.key}')"/></td>
 	    			<td>${me.value.price}</td>
 	    			<td>
-	    				<a href="javascript:delOneItem('${me.key}')">حذف</a>
+	    				<a href="javascript:delOneItem('${me.key}')">Del</a>
 	    			</td>
 	    		</tr>
     		</c:forEach>
     		<tr>
     			<td align="right" colspan="6">
-    				شماره سفارش：${sessionScope.cart.number}&nbsp;&nbsp;
-    				قیمت：${sessionScope.cart.price}&nbsp;&nbsp;
-    				<a href="${pageContext.request.contextPath}/servlet/ClientServlet?op=genOrder">تایید</a>
+    				Order Number：${sessionScope.cart.number}&nbsp;&nbsp;
+    				Price：${sessionScope.cart.price}&nbsp;&nbsp;
+    				<a href="${pageContext.request.contextPath}/servlet/ClientServlet?op=genOrder">Order</a>
     			</td>
     		</tr>
     	</table>
+    </p>
     </c:if>
+             </div>
+    	</div>
     <script type="text/javascript">
     	function delOneItem(bookId){
     		var sure = window.confirm("آیا مطمئن هستید که می خواهید حذف کنید？");
@@ -56,6 +65,7 @@
     			inputObj.value = oldNumber;
     		}
     	}
-    </script>
-  </body>
-</html>
+    </script> 
+    <!--/slider -->
+
+<%@ include file="/shop/commons/footer.jsp"%>

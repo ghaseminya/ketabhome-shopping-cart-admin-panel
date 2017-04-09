@@ -73,7 +73,7 @@ public class ClientServlet extends HttpServlet {
 			List<Order>  orders=s.findOrdersByCustomerId(customer.getId());
 			request.setAttribute("orders", orders);
 			
-			request.getRequestDispatcher("/listOrders.jsp").forward(request, response);
+			request.getRequestDispatcher("/shop/orders.jsp").forward(request, response);
 				
 				
 		
@@ -111,7 +111,7 @@ public class ClientServlet extends HttpServlet {
 		order.setItems(oItems);
 		s.genOrder(order);
 		request.setAttribute("order", order);
-		request.getRequestDispatcher("/pay.jsp").forward(request, response);
+		request.getRequestDispatcher("/shop/pay.jsp").forward(request, response);
 		
 		
 	}
@@ -170,7 +170,7 @@ public class ClientServlet extends HttpServlet {
 		
 		request.setAttribute("message", "ثبت نام با موفقیت انجام شد.ما یک ایمیل"
                         + "فعال سازی به "+customer.getEmail()+"ارسال کردیم، لطفا آنرا مطالعه کنید.");
-		request.getRequestDispatcher("/message.jsp").forward(request, response);
+		request.getRequestDispatcher("/shop/message.jsp").forward(request, response);
 
 	}
 
@@ -183,7 +183,7 @@ public class ClientServlet extends HttpServlet {
 		CartItem item=cart.getItems().get(bookId);
 		item.setNumber(Integer.parseInt(request.getParameter("num")));
 		
-		response.sendRedirect(request.getContextPath()+"/showCart.jsp");
+		response.sendRedirect(request.getContextPath()+"/shop/cart.jsp");
 	}
 
 
@@ -198,7 +198,7 @@ public class ClientServlet extends HttpServlet {
 		Cart cart=(Cart) request.getSession().getAttribute("cart");
 		cart.getItems().remove(bookId);
 		
-		response.sendRedirect(request.getContextPath()+"/showCart.jsp");
+		response.sendRedirect(request.getContextPath()+"/shop/cart.jsp");
 		
 	}
 
@@ -216,7 +216,7 @@ public class ClientServlet extends HttpServlet {
 		cart.addBook2Items(book);
 		request.setAttribute("message", "خرید با موفقیت انجام شد！<a href='javascript:window.history.back()'>بازگشت</a>");
 		try {
-			request.getRequestDispatcher("/message.jsp").forward(request,response);
+			request.getRequestDispatcher("/shop/cart.jsp").forward(request,response);
 		} catch (ServletException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -240,7 +240,7 @@ public class ClientServlet extends HttpServlet {
 		page.setUrl("/servlet/ClientServlet?op=listBookByCategory&categoryId="+categoryId);
 		request.setAttribute("page", page);
 		try {
-			request.getRequestDispatcher("/listBooks.jsp").forward(request, response);
+			request.getRequestDispatcher("/shop/index.jsp").forward(request, response);
 		} catch (ServletException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -261,7 +261,7 @@ public class ClientServlet extends HttpServlet {
 		Page page=s.findPage(num);
 		page.setUrl("/servlet/ClientServlet?op=listBooks");
 		request.setAttribute("page", page);
-		request.getRequestDispatcher("/listBooks.jsp").forward(request, response);
+		request.getRequestDispatcher("/shop/index.jsp").forward(request, response);
 		
 		
 		

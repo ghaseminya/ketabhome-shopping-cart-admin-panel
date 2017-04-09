@@ -35,11 +35,10 @@
    			 </div>
 			 <div class="cssmenu">
 				<ul>
-					<li class="active"><a href="login.html">Account</a></li> |
-					<li><a href="checkout.html">Wishlist</a></li> |
-					<li><a href="checkout.html">Checkout</a></li> |
-					<li><a href="login.html">Log In</a></li> |
-					<li><a href="register.html">Sign Up</a></li>
+					<li class="active"><a href="${pageContext.request.contextPath}/shop/login.sjp">Account</a></li> |
+					<li><a href="${pageContext.request.contextPath}/shop/cart.jsp">Checkout</a></li> |
+					<li><a href="${pageContext.request.contextPath}/shop/login.jsp">Log In</a></li> |
+					<li><a href="${pageContext.request.contextPath}/shop/register.jsp">Sign Up</a></li>
 				</ul>
 			</div>
 			<div class="clear"></div>
@@ -49,92 +48,32 @@
 	    <div class="wrap">
 			<div class="header-bottom-left">
 				<div class="logo">
-					<a href="index.html">
-                                            <img src="${pageContext.request.contextPath}/shop/assets/images/logo3.png" style="height: 71px" alt=""/></a>
+					<a href="${pageContext.request.contextPath}/index.jsp">
+                                            <img src="${pageContext.request.contextPath}/shop/assets/images/logo.png" style="height: 41px" alt=""/></a>
 				</div>
 				<div class="menu">
 	            <ul class="megamenu skyblue">
 			<li class="active grid"><a href="index.html"><fmt:message key="index.name" /></a></li>
-			<li><a class="color4" href="#">women</a>
+			<li><a class="color4" href="#">Category</a>
 				<div class="megapanel">
 					<div class="row">
 						<div class="col1">
 							<div class="h_nav">
-								<h4>Contact Lenses</h4>
+								<h4>List of Category</h4>
 								<ul>
-									<li><a href="womens.html">Daily-wear soft lenses</a></li>
-									<li><a href="womens.html">Extended-wear</a></li>
-									<li><a href="womens.html">Lorem ipsum </a></li>
-									<li><a href="womens.html">Planned replacement</a></li>
-								</ul>	
+                                                                    <c:forEach items="${cs}" var="c">
+                                                                        <li><a href="${pageContext.request.contextPath}/servlet/ClientServlet?op=listBookByCategory&categoryId=${c.id}">${c.name}</a></li>
+    </c:forEach>
+									</ul>	
 							</div>							
 						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Sun Glasses</h4>
-								<ul>
-									<li><a href="womens.html">Heart-Shaped</a></li>
-									<li><a href="womens.html">Square-Shaped</a></li>
-									<li><a href="womens.html">Round-Shaped</a></li>
-									<li><a href="womens.html">Oval-Shaped</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Eye Glasses</h4>
-								<ul>
-									<li><a href="womens.html">Anti Reflective</a></li>
-									<li><a href="womens.html">Aspheric</a></li>
-									<li><a href="womens.html">Bifocal</a></li>
-									<li><a href="womens.html">Hi-index</a></li>
-									<li><a href="womens.html">Progressive</a></li>
-								</ul>	
-							</div>												
-						</div>
+						
 					  </div>
 					</div>
 				</li>				
-				<li><a class="color5" href="#">Men</a>
-				<div class="megapanel">
-					<div class="col1">
-							<div class="h_nav">
-								<h4>Contact Lenses</h4>
-								<ul>
-									<li><a href="mens.html">Daily-wear soft lenses</a></li>
-									<li><a href="mens.html">Extended-wear</a></li>
-									<li><a href="mens.html">Lorem ipsum </a></li>
-									<li><a href="mens.html">Planned replacement</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Sun Glasses</h4>
-								<ul>
-									<li><a href="mens.html">Heart-Shaped</a></li>
-									<li><a href="mens.html">Square-Shaped</a></li>
-									<li><a href="mens.html">Round-Shaped</a></li>
-									<li><a href="mens.html">Oval-Shaped</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Eye Glasses</h4>
-								<ul>
-									<li><a href="mens.html">Anti Reflective</a></li>
-									<li><a href="mens.html">Aspheric</a></li>
-									<li><a href="mens.html">Bifocal</a></li>
-									<li><a href="mens.html">Hi-index</a></li>
-									<li><a href="mens.html">Progressive</a></li>
-								</ul>	
-							</div>												
-						</div>
-					</div>
-				</li>
-				<li><a class="color6" href="other.html">Other</a></li>
-				<li><a class="color7" href="other.html">Purchase</a></li>
+				
+				<li><a class="color6" href="${pageContext.request.contextPath}/shop/orders.jsp">Other</a></li>
+				<li><a class="color7" href="${pageContext.request.contextPath}/shop/cart.jsp">Purchase</a></li>
 			</ul>
 			</div>
 		</div>

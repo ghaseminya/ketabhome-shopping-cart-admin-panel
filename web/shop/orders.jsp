@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ include file="/header.jsp"%>
+<%@ include file="/shop/commons/header.jsp"%>
     <h1>مشخصات سفارشات من</h1>
     <c:if test="${empty orders}">
     	سفارشی ثبت نشده است.
@@ -48,5 +48,5 @@
     		</c:forEach>
     	</table>
     </c:if>
-  </body>
-</html>
+  <%@ include file="/shop/commons/footer.jsp"%>
+

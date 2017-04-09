@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ include file="/header.jsp"%>
+<%@ include file="/shop/commons/header.jsp"%>
     <h2>${message}</h2>
-  </body>
-</html>
+<%@ include file="/shop/commons/footer.jsp"%>
+
