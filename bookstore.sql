@@ -1,12 +1,4 @@
---
--- Database: `bookstore`
---
 
--- --------------------------------------------------------
-
---
--- Table structure for table `books`
---
 
 CREATE TABLE `books` (
   `id` varchar(100) NOT NULL,
@@ -24,8 +16,13 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`id`, `name`, `author`, `price`, `path`, `filename`, `des`, `categoryId`) VALUES
-('1', 'ketab shomare1', 'man hastam', 3200.00, NULL, 'adfa', 'nadarad', '1'),
-('2', 'جاوا', 'قاسمی', 10000.00, 'ندارد', 'ندارد', 'ندارد', '2');
+('1', 'ketab shomare1', 'man hastam', 3200.00, NULL, 'book6.jpg', 'nadarad', '1'),
+('2', 'Programming Java', 'Deitel', 10000.00, 'ندارد', 'book5.jpg', 'ندارد', '2'),
+('3', 'my Lemon', 'joe jiki', 234200.00, '-', 'book1.png', NULL, '2'),
+('4', 'One Java Prgrammer!', 'Ghaseminya', 2300.00, NULL, 'book2.jpg', NULL, '2'),
+('5', 'What is my God?', 'Bodi nabodi', 1200.00, NULL, 'book3.jpg', NULL, '2'),
+('6', 'A J2EE Man', 'ghasmeinya', 100.00, NULL, 'book4.png', NULL, '2'),
+('72c7186c-af65-45a1-8c01-f0c147e29a64', 'my noo', 'asd', 123.00, '2017-04-10', '9ff5af46-1f65-4225-bd1b-1dd6c78b1ec5.png', 'asd', '2');
 
 -- --------------------------------------------------------
 
@@ -45,7 +42,7 @@ CREATE TABLE `categorys` (
 
 INSERT INTO `categorys` (`id`, `name`, `des`) VALUES
 ('1', 'ketab1', 'salam'),
-('2', 'رایانه', 'کتابهای رایانه ای');
+('2', 'Programming', 'programming');
 
 -- --------------------------------------------------------
 
@@ -88,12 +85,12 @@ CREATE TABLE `functions` (
 --
 
 INSERT INTO `functions` (`id`, `name`, `uri`) VALUES
-('1', 'خانه', '/BookStore/manage/index.jsp'),
-('2', 'اخبار', '/BookStore/manage/message.jsp'),
-('3', 'ثبت دسته جدید', '/BookStore/manage/addCategory.jsp'),
-('4', 'لیست دسته ها', '/BookStore/servlet/ManageServlet?op=listCategories'),
-('5', 'ثبت کتاب جدید', '/BookStore/servlet/ManageServlet?op=addBookUI'),
-('6', 'لیست کتابها', '/BookStore/servlet/ManageServlet?op=listBooks');
+('1', 'dashboard', '/manage/index.jsp'),
+('2', 'message', '/manage/message.jsp'),
+('3', 'new cat', '/manage/addCategory.jsp'),
+('4', 'list categ', '/servlet/ManageServlet?op=listCategories'),
+('5', 'new book', '/servlet/ManageServlet?op=addBookUI'),
+('6', 'list books', '/servlet/ManageServlet?op=listBooks');
 
 -- --------------------------------------------------------
 
