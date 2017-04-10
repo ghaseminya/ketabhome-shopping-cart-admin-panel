@@ -3,14 +3,6 @@
 Table of Contents
 =================
 
-   * [Introduction](#introduction)
-   * [Usefull Links](#usefull-links)
-   * [Netbeans idea](#netbeans-idea)
-   * [Database Setting](#database-setting)
-   * [Some Featurs](#some-featurs)
-   * [More Information](#more-information)
-   * [Some Screenshots](#some-screenshots)
-   * [License](#license)
 
 
 # Introduction
@@ -18,12 +10,24 @@ ketabhome is an simple online book store template
 
 this shop has a simple admin panel too!
 
-# Usefull Links
-[shop index](http://localhost:8080/ketabhome/)
+# Demo
 
-[admin panel](http://localhost:8080/ketabhome/manage/index.jsp) 
+shop index: http://ketabhome.ir
+
+admin panel: http://ketabhome.ir/manage/
 
 username:admin
+
+password:123
+
+# Usefull Links
+
+http://localhost:8080/ketabhome/
+
+http://localhost:8080/ketabhome/manage/index.jsp
+
+username:admin
+
 password:123
 
 # Netbeans idea
