@@ -25,7 +25,7 @@ this shop has a simple admin panel too!
 
 shop index: http://ketabhome.ir
 
-admin panel: http://ketabhome.ir/manage/
+admin panel: http://ketabhome.ir/manage/index.jsp
 
 username:admin
 
