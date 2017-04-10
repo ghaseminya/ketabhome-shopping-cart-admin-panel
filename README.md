@@ -1,12 +1,18 @@
 ![ketab](https://github.com/ghaseminya/ketabhome/raw/master/web/res/shop_assets/images/logo.png)
-# ketabhome
+# Introduction
 ketabhome is an simple online book store template
 
 this shop has a simple admin panel too!
 
-# netbeans idea
-add jar file in lib folder to your project
+# Usefull Links
+[shop index](http://localhost:8080/ketabhome/)
+[admin panel](http://localhost:8080/ketabhome/manage/index.jsp) username:admin password:123
 
+# Netbeans idea
+add jar file in `./lib` folder to your project
+
+# Database Setting
+Just import ketabhome.sql in your database and config [c3p0-config.xml](https://github.com/ghaseminya/ketabhome/blob/master/src/java/c3p0-config.xml)
 
 # Some Featurs
 * [Bootstrap ACE admin dashboard](http://jason.insweet.family/ace/)
@@ -19,14 +25,14 @@ add jar file in lib folder to your project
 * Admin Panel
 * Netbeans needed file!
 
-## More Information
+# More Information
 * Website: http://ketabhome.ir/
 * Roadmap(upcoming features and bug fixes): https://github.com/ghaseminya/ketabhome
 * Hosting: [javahosting](http://www.javahosting.ir)
 * Development: https://github.com/ghaseminya/ketabhome
 * Copyright (C) 2017 javahosting.
 
-## Some Screenshots
+# Some Screenshots
 ![index](https://github.com/ghaseminya/ketabhome/raw/master/screenshot/index.png)
 ![dashbaord](https://github.com/ghaseminya/ketabhome/raw/master/screenshot/dashbaord.png)
 ![login](https://github.com/ghaseminya/ketabhome/raw/master/screenshot/login.png)
@@ -36,6 +42,6 @@ add jar file in lib folder to your project
 ![addcateg](https://github.com/ghaseminya/ketabhome/raw/master/screenshot/addcateg.png)
 
 
-## License
+# License
 
 [GPL v3](./LICENSE).
