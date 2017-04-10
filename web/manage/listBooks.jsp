@@ -1,11 +1,47 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%@ include file="/manage/commons/header.jsp"%>
-<h3>Book List</h3>
+<div class="main-content">
+    <div class="main-content-inner">
+        <div class="breadcrumbs ace-save-state" id="breadcrumbs">
+            <ul class="breadcrumb">
+                <li>
+                    <i class="ace-icon fa fa-home home-icon"></i>
+                    <a href="${pageContext.request.contextPath}/manage/">Home</a>
+                </li>
+
+                <li>
+                    <a href="#">Book</a>
+                </li>
+                <li class="active">List of Book</li>
+            </ul><!-- /.breadcrumb -->
+
+            <div class="nav-search" id="nav-search">
+                <form class="form-search">
+                    <span class="input-icon">
+                        <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                        <i class="ace-icon fa fa-search nav-search-icon"></i>
+                    </span>
+                </form>
+            </div><!-- /.nav-search -->
+        </div>
+
+        <div class="page-content">
+            <div class="page-header">
+                <h1>
+                    List of Book
+                    <small>
+                        <i class="ace-icon fa fa-angle-double-right"></i>
+                        all Book
+                    </small>
+                </h1>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
     <c:if test="${empty page.records}">
     	<h2><fmt:message key="dashboard.nobook" />，<a href="${pageContext.request.contextPath}/servlet/ManageServlet?op=addBookUI">Add new BOOK</a></h2>
     </c:if>
     <c:if test="${!empty page.records}">
-    	<table border="1" width="900">
+    	<table class="table  table-bordered table-hover">
     		<tr>
     			<Th> picture </ th>
      <Th> title </ th>
@@ -32,6 +68,10 @@
 	    		</tr>
     		</c:forEach>
     	</table>
-    	<%@ include file="/shop/commons/page.jsp"%>
-    </c:if>
+    	<%@ include file="/manage/commons/page.jsp"%>
+    </c:if></div>
+            </div>
+        </div>
+    </div>
+</div>
 <%@ include file="/manage/commons/footer.jsp"%>

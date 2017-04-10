@@ -173,7 +173,7 @@
 		<div class="footer-bottom">
 			<div class="wrap">
 	             <div class="copy">
-			        <p>© 2014 Template by <a href="http://w3layouts.com" target="_blank">w3layouts</a></p>
+			        <p>© 2017 Design By <a href="http://javahosting.ir" target="_blank">JavaHosting</a></p>
 		         </div>
 				<div class="f-list2">
 				 <ul>

@@ -111,7 +111,7 @@ public class ManageServlet extends HttpServlet {
 				book.setFilename(filename);
 				
 				
-				String rootDirectory = getServletContext().getRealPath("../images");
+				String rootDirectory = getServletContext().getRealPath("/res/shop_assets/images/book");
 				String childPath = getStoreDirecotry(rootDirectory);
 				book.setPath(childPath);
 				

@@ -6,13 +6,10 @@
 						<ul class="breadcrumb">
 							<li>
 								<i class="ace-icon fa fa-home home-icon"></i>
-								<a href="#">Home</a>
+								<a href="${pageContext.request.contextPath}/manage/">Home</a>
 							</li>
 
-							<li>
-								<a href="#">Other Pages</a>
-							</li>
-							<li class="active">Blank Page</li>
+							<li class="active">Dashboard</li>
 						</ul><!-- /.breadcrumb -->
 
 						<div class="nav-search" id="nav-search">
@@ -30,9 +27,26 @@
 
 						<div class="row">
 							<div class="col-xs-12">
-								<!-- PAGE CONTENT BEGINS -->
-
-								<!-- PAGE CONTENT ENDS -->
+								<div class="row">
+									<div class="col-xs-12">
+										<a href="${pageContext.request.contextPath}/servlet/ManageServlet?op=listBooks" class="btn btn-default btn-app radius-4">
+											<i class="ace-icon fa fa-table bigger-230"></i>
+											Book List
+										</a>
+										<a href="${pageContext.request.contextPath}/servlet/ManageServlet?op=listCategories" class="btn btn-default btn-app radius-4">
+											<i class="ace-icon fa fa-table bigger-230"></i>
+											Category List
+										</a>
+										<a href="${pageContext.request.contextPath}/servlet/ManageServlet?op=addBookUI" class="btn btn-default btn-app radius-4">
+											<i class="ace-icon fa fa-plus bigger-230"></i>
+											New Book 
+										</a>
+										<a href="${pageContext.request.contextPath}/manage/addCategory.jsp" class="btn btn-default btn-app radius-4">
+											<i class="ace-icon fa fa-plus bigger-230"></i>
+											New Category
+										</a>
+                                                                        </div>
+                                                                </div>
 							</div><!-- /.col -->
 						</div><!-- /.row -->
 					</div><!-- /.page-content -->

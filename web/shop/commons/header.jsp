@@ -7,8 +7,9 @@
 <!DOCTYPE HTML>
 <html lang="${language}">
 <head>
-<title>Free Leoshop Website Template | Home :: w3layouts</title>
+<title>KetabHome | Index</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="shortcut icon"  href="${pageContext.request.contextPath}/res/shop_assets/images/favicon.png" sizes="16x16" type="image/png">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="${pageContext.request.contextPath}/res/shop_assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <link href="${pageContext.request.contextPath}/res/shop_assets/css/form.css" rel="stylesheet" type="text/css" media="all" />
