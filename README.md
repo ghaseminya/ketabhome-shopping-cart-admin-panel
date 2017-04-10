@@ -1,3 +1,4 @@
+![ketab](https://github.com/ghaseminya/ketabhome/raw/master/web/res/shop_assets/images/logo.png)
 # ketabhome
 ketabhome is an simple online book store template
 
