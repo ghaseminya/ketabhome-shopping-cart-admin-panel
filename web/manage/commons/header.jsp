@@ -11,37 +11,37 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 		<!-- bootstrap & fontawesome -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/res/manage_assets/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/res/manage_assets/font-awesome/4.5.0/css/font-awesome.min.css" />
 
 		<!-- page specific plugin styles -->
 
 		<!-- text fonts -->
-		<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/res/manage_assets/css/fonts.googleapis.com.css" />
 
 		<!-- ace styles -->
-		<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/res/manage_assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 
 		<!--[if lte IE 9]>
-			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
+			<link rel="stylesheet" href="${pageContext.request.contextPath}/res/manage_assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
 		<![endif]-->
-		<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
-		<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/res/manage_assets/css/ace-skins.min.css" />
+		<link rel="stylesheet" href="${pageContext.request.contextPath}/res/manage_assets/css/ace-rtl.min.css" />
 
 		<!--[if lte IE 9]>
-		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
+		  <link rel="stylesheet" href="${pageContext.request.contextPath}/res/manage_assets/css/ace-ie.min.css" />
 		<![endif]-->
 
 		<!-- inline styles related to this page -->
 
 		<!-- ace settings handler -->
-		<script src="assets/js/ace-extra.min.js"></script>
+		<script src="${pageContext.request.contextPath}/res/manage_assets/js/ace-extra.min.js"></script>
 
 		<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
 		<!--[if lte IE 8]>
-		<script src="assets/js/html5shiv.min.js"></script>
-		<script src="assets/js/respond.min.js"></script>
+		<script src="${pageContext.request.contextPath}/res/manage_assets/js/html5shiv.min.js"></script>
+		<script src="${pageContext.request.contextPath}/res/manage_assets/js/respond.min.js"></script>
 		<![endif]-->
 	</head>
 
@@ -230,7 +230,7 @@
 									<ul class="dropdown-menu dropdown-navbar">
 										<li>
 											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
+												<img src="${pageContext.request.contextPath}/res/manage_assets/images/avatars/avatar.png" class="msg-photo" alt="Alex's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Alex:</span>
@@ -247,7 +247,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
+												<img src="${pageContext.request.contextPath}/res/manage_assets/images/avatars/avatar3.png" class="msg-photo" alt="Susan's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Susan:</span>
@@ -264,7 +264,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
+												<img src="${pageContext.request.contextPath}/res/manage_assets/images/avatars/avatar4.png" class="msg-photo" alt="Bob's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Bob:</span>
@@ -281,7 +281,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
+												<img src="${pageContext.request.contextPath}/res/manage_assets/images/avatars/avatar2.png" class="msg-photo" alt="Kate's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Kate:</span>
@@ -298,7 +298,7 @@
 
 										<li>
 											<a href="#" class="clearfix">
-												<img src="assets/images/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
+												<img src="${pageContext.request.contextPath}/res/manage_assets/images/avatars/avatar5.png" class="msg-photo" alt="Fred's Avatar" />
 												<span class="msg-body">
 													<span class="msg-title">
 														<span class="blue">Fred:</span>
@@ -326,7 +326,7 @@
 
 						<li class="light-blue dropdown-modal">
 							<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-								<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
+								<img class="nav-user-photo" src="${pageContext.request.contextPath}/res/manage_assets/images/avatars/user.jpg" alt="Jason's Photo" />
 								<span class="user-info">
 									<small>Welcome,</small>
 									Jason
@@ -432,9 +432,17 @@
 						<b class="arrow"></b>
 					</li>
                                         <li class="">
-						<a href="${pageContext.request.contextPath}/manage/addCategory.jsp">
+						<a href="${pageContext.request.contextPath}/servlet/ManageServlet?op=addBookUI">
 							<i class="menu-icon fa fa-tachometer"></i>
-							<span class="menu-text">New Category </span>
+							<span class="menu-text">New Book </span>
+						</a>
+
+						<b class="arrow"></b>
+					</li>
+                                        <li class="">
+						<a href="${pageContext.request.contextPath}/servlet/ManageServlet?op=listBooks">
+							<i class="menu-icon fa fa-tachometer"></i>
+							<span class="menu-text">List Book </span>
 						</a>
 
 						<b class="arrow"></b>
@@ -445,17 +453,3 @@
 					<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
 				</div>
 			</div>
-
-			
-
-			
-    <a href="">添加分类</a>
-    <a href="">查询分类</a>
-    <a href="${pageContext.request.contextPath}/servlet/ManageServlet?op=addBookUI">添加书籍</a>
-    <a href="${pageContext.request.contextPath}/servlet/ManageServlet?op=listBooks">查询书籍</a>
-    <a href="">待处理订单</a>
-    <a href="">已处理订单</a>
-    <br/>
-     
-   
-</html>

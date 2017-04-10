@@ -10,15 +10,15 @@
 <title>Free Leoshop Website Template | Home :: w3layouts</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link href="${pageContext.request.contextPath}/shop/assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<link href="${pageContext.request.contextPath}/shop/assets/css/form.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="${pageContext.request.contextPath}/shop/assets/js/jquery1.min.js"></script>
+<link href="${pageContext.request.contextPath}/res/shop_assets/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="${pageContext.request.contextPath}/res/shop_assets/css/form.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/res/shop_assets/js/jquery1.min.js"></script>
 <!-- start menu -->
-<link href="${pageContext.request.contextPath}/shop/assets/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
-<script type="text/javascript" src="${pageContext.request.contextPath}/shop/assets/js/megamenu.js"></script>
+<link href="${pageContext.request.contextPath}/res/shop_assets/css/megamenu.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="${pageContext.request.contextPath}/res/shop_assets/js/megamenu.js"></script>
 <script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
 
-<script src="${pageContext.request.contextPath}/shop/assets/js/jquery.easydropdown.js"></script>
+<script src="${pageContext.request.contextPath}/res/shop_assets/js/jquery.easydropdown.js"></script>
 </head>
 <body>
      <div class="header-top">
@@ -49,7 +49,7 @@
 			<div class="header-bottom-left">
 				<div class="logo">
 					<a href="${pageContext.request.contextPath}/index.jsp">
-                                            <img src="${pageContext.request.contextPath}/shop/assets/images/logo.png" style="height: 41px" alt=""/></a>
+                                            <img src="${pageContext.request.contextPath}/res/shop_assets/images/logo.png" style="height: 41px" alt=""/></a>
 				</div>
 				<div class="menu">
 	            <ul class="megamenu skyblue">

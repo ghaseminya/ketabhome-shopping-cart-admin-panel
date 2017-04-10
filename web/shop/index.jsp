@@ -16,7 +16,7 @@
 			   <a href="${pageContext.request.contextPath}/servlet/ClientServlet?op=buyBook&bookId=${b.id}">
 				<div class="inner_content clearfix">
 					<div class="product_image">
-						<img src="${pageContext.request.contextPath}/shop/assets/images/book/${b.filename}" alt=""/>
+						<img src="${pageContext.request.contextPath}/res/shop_assets/images/book/${b.filename}" alt=""/>
 					</div>
                     <div class="sale-box"><span class="on_sale title_shop">New</span></div>	
                     <div class="price">
@@ -45,7 +45,7 @@
 				<div class="top-border"> </div>
 				 <div class="border">
 	             
-                                     <img src="${pageContext.request.contextPath}/shop/assets/images/t-img4.jpg" style="width: 230px;height: 450px"  alt="" />
+                                     <img src="${pageContext.request.contextPath}/res/shop_assets/images/t-img4.jpg" style="width: 230px;height: 450px"  alt="" />
               <div class="btn"><a href="single.html">Check it Out</a></div>
              </div>
            <div class="top-border"> </div>

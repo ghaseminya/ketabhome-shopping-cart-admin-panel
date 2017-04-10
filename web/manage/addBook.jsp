@@ -1,40 +1,40 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ include file="/manage/header.jsp"%>
-    <h3>当前位置：添加书籍</h3>
+<%@ include file="/manage/commons/header.jsp"%>
+    <h3>Add New BOOK</h3>
     <form enctype="multipart/form-data" action="${pageContext.request.contextPath}/servlet/ManageServlet?op=addBook" method="post">
     	<table border="1" width="438">
     		<tr>
-    			<td>书名：</td>
+    			<td>book name：</td>
     			<td>
     				<input name="name" id="name" />
     			</td>
     		</tr>
     		<tr>
-    			<td>作者：</td>
+    			<td>Book Auther：</td>
     			<td>
     				<input name="author" id="author" />
     			</td>
     		</tr>
     		<tr>
-    			<td>单价：</td>
+    			<td>price：</td>
     			<td>
     				<input name="price" id="price" />元
     			</td>
     		</tr>
     		<tr>
-    			<td>图片：</td>
+    			<td>image：</td>
     			<td>
     				<input type="file" name="image" />
     			</td>
     		</tr>
     		<tr>
-    			<td>描述：</td>
+    			<td>desc：</td>
     			<td>
     				<textarea rows="3" cols="38" name="des"></textarea>
     			</td>
     		</tr>
     		<tr>
-    			<td>所属分类：</td>
+    			<td>categ：</td>
     			<td>
     				<select name="categoryId">
     					<c:forEach items="${cs}" var="c">
@@ -44,7 +44,6 @@
     			</td>
     		</tr>
     	</table>
-    	<input type="submit" value="添加"/>
+    	<input type="submit" value="Submit"/>
     </form>
-  </body>
-</html>
+<%@ include file="/manage/commons/footer.jsp"%>

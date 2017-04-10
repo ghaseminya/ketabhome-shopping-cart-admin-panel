@@ -43,7 +43,7 @@ public class PrivilegeFilter implements Filter {
 		
 		User user = (User) request.getSession().getAttribute(Constant.USER_LOGIN_FLAG);
 		if(user==null){
-			response.sendRedirect(request.getContextPath()+"/passport/login.jsp");
+			response.sendRedirect(request.getContextPath()+"/op/login.jsp");
 			return;
 		}
 		Set<Function> functions = new HashSet<Function>();

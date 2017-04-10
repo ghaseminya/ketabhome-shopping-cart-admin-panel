@@ -1,22 +1,22 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ include file="/manage/header.jsp"%>
-    <h3>当前位置：添加新分类</h3>
+<%@ include file="/manage/commons/header.jsp"%>
+    <h3>Add New Category</h3>
     <form action="${pageContext.request.contextPath}/servlet/ManageServlet?op=addCategory" method="post">
     	<table border="1" width="438">
     		<tr>
-    			<td>分类名称：</td>
+    			<td>Name：</td>
     			<td>
     				<input name="name" id="name" /><span id="sname"></span>
     			</td>
     		</tr>
     		<tr>
-    			<td>描述：</td>
+    			<td>Desc：</td>
     			<td>
     				<textarea rows="3" cols="38" name="des"></textarea>
     			</td>
     		</tr>
     	</table>
-    	<input type="submit" value="添加"/>
+    	<input type="submit" value="submit"/>
     </form>
     
      </center>
@@ -38,5 +38,4 @@
     		}
     	}
     </script>
-  </body>
-</html>
+<%@ include file="/manage/commons/footer.jsp"%>

@@ -124,7 +124,7 @@ public class ManageServlet extends HttpServlet {
 		}
 		
 		s.addBook(book);
-		request.setAttribute("message", "添加书籍成功");
+		request.setAttribute("message", "add book successed");
 		try {
 			request.getRequestDispatcher("/manage/message.jsp").forward(request, response);
 		} catch (Exception e) {

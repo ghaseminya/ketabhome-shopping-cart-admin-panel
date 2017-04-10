@@ -24,7 +24,7 @@ public class LoginServlet extends HttpServlet {
 		User user=s.login(username,password);
 		if(user==null){
 			response.getWriter().write("نام کاربری یا رمز عبور اشتباه است.");
-			response.setHeader("Refresh","2;URL="+request.getContextPath()+"/passport/login.jsp");
+			response.setHeader("Refresh","2;URL="+request.getContextPath()+"/op/login.jsp");
 			return;
 		
 		}

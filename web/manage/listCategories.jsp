@@ -1,19 +1,19 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ include file="/manage/header.jsp"%>
+<%@ include file="/manage/commons/header.jsp"%>
 
 <center>
-<h3>当前位置：查询分类</h3>
+<h3>List Of category</h3>
     <c:if test="${empty cs}">
-    	<h2>您还没有添加任何分类，<a href="${pageContext.request.contextPath}/manage/addCategory.jsp">添加</a></h2>
+    	<h2><fmt:message key="dashboard.nocategory" />，<a href="${pageContext.request.contextPath}/manage/addCategory.jsp">New Category</a></h2>
     </c:if>
     <c:if test="${!empty cs}">
     	<table border="1" width="438">
     		<tr>
-    			<th>选择</th>
-    			<th>序号</th>
-    			<th>分类名称</th>
-    			<th>描述</th>
-    			<th>操作</th>
+    			<Th> Select </th>
+     <Th> serial number </th>
+     <Th> classification name </th>
+     <Th> Description </th>
+     <Th> operation </th>
     		</tr>
     		<c:forEach items="${cs}" var="c" varStatus="vs">
     			<tr class="${vs.index%2==0?'even':'odd'}">
@@ -24,15 +24,15 @@
 	    			<td>${c.name}</td>
 	    			<td>${c.des}</td>
 	    			<td>
-	    				[<a href="javascript:update()">修改</a>]
-	    				[<a href="" onclick="del(this)">删除</a>]
+	    				[<a href="javascript:update()">Modify</a>]
+	    				[<a href="" onclick="del(this)">Delete</a>]
 	    			</td>
 	    		</tr>
     		</c:forEach>
     	</table>
     </c:if>
      </center>
-     <script type="text/javascript" src="../js/jquery-1.11.3.js"  ></script>
+     <script type="text/javascript" src="${pageContext.request.contextPath}/res/manage_assets/js/jquery-1.11.3.js"  ></script>
      <script type="text/javascript">
 
 			function del(obj){
@@ -46,7 +46,4 @@
 
 
 	</script>
-     
-     
-  </body>
-</html>
+<%@ include file="/manage/commons/footer.jsp"%>
