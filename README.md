@@ -2,15 +2,7 @@
 
 Table of Contents
 =================
-   * [Introduction](#introduction)
-   * [Demo](#demo)
-   * [Usefull Links](#usefull-links)
-   * [Netbeans idea](#netbeans-idea)
-   * [Database Setting](#database-setting)
-   * [Some Featurs](#some-featurs)
-   * [More Information](#more-information)
-   * [Some Screenshots](#some-screenshots)
-   * [License](#license)
+
 
 
 
@@ -29,8 +21,15 @@ username:admin
 
 password:123
 
-# Usefull Links
-
+# Deploy War file in Tomcat
+first star project and fork it
+```shell
+git clone https://github.com/ghaseminya/ketabhome
+```
+copy `final_dist/ketabhome.war` to [Apache Tomcat/webdir] and extract it
+then
+edit `WEB-INF/classes/c0p3-config.xml` with your database setting(such as username and passwor),
+then start tomcat and then go to this url:
 http://localhost:8080/ketabhome/
 
 http://localhost:8080/ketabhome/manage/index.jsp
@@ -39,10 +38,11 @@ username:admin
 
 password:123
 
-# Netbeans idea
+# Your Compilation
+## Netbeans idea
 add jar file in `./lib` folder to your project
 
-# Database Setting
+## Database Setting
 Just import ketabhome.sql in your database and config [c3p0-config.xml](https://github.com/ghaseminya/ketabhome/blob/master/src/java/c3p0-config.xml)
 
 # Some Featurs
