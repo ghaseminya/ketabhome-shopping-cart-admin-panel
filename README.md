@@ -20,7 +20,11 @@ this shop has a simple admin panel too!
 
 # Usefull Links
 [shop index](http://localhost:8080/ketabhome/)
-[admin panel](http://localhost:8080/ketabhome/manage/index.jsp) username:admin password:123
+
+[admin panel](http://localhost:8080/ketabhome/manage/index.jsp) 
+
+username:admin
+password:123
 
 # Netbeans idea
 add jar file in `./lib` folder to your project
