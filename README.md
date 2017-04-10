@@ -26,10 +26,8 @@ first star project and fork it
 ```shell
 git clone https://github.com/ghaseminya/ketabhome
 ```
-copy `final_dist/ketabhome.war` to [Apache Tomcat/webdir] and extract it
-then
-edit `WEB-INF/classes/c0p3-config.xml` with your database setting(such as username and passwor),
-then start tomcat and then go to this url:
+copy `final_dist/ketabhome.war` to [Apache Tomcat/webdir] and extract it then edit `WEB-INF/classes/c0p3-config.xml` with your database setting(such as username and passwor), then start tomcat and then go to this url:
+
 http://localhost:8080/ketabhome/
 
 http://localhost:8080/ketabhome/manage/index.jsp
