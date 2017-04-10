@@ -26,6 +26,16 @@ add jar file in lib folder to your project
 * Development: https://github.com/ghaseminya/ketabhome
 * Copyright (C) 2017 javahosting.
 
+## Some Screenshots
+![index](https://github.com/ghaseminya/ketabhome/raw/master/screenshot/index.png)
+![dashbaord](https://github.com/ghaseminya/ketabhome/raw/master/screenshot/dashbaord.png)
+![login](https://github.com/ghaseminya/ketabhome/raw/master/screenshot/login.png)
+![listbook](https://github.com/ghaseminya/ketabhome/raw/master/screenshot/listbook.png)
+![listcateg](https://github.com/ghaseminya/ketabhome/raw/master/screenshot/listcateg.png)
+![addbook](https://github.com/ghaseminya/ketabhome/raw/master/screenshot/addbook.png)
+![addcateg](https://github.com/ghaseminya/ketabhome/raw/master/screenshot/addcateg.png)
+
+
 ## License
 
 [GPL v3](./LICENSE).
